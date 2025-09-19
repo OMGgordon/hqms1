@@ -136,7 +136,7 @@ const DashboardLayout: React.FC<LayoutProps> = ({ children }) => {
           label: 'Appointments',
           icon: Calendar,
           children: [
-            { id: 'todays-schedule', label: "Today's Schedule", icon: Calendar, href: '/doctor/appointments/today' },
+            { id: 'todays-schedule', label: "Today&apos;s Schedule", icon: Calendar, href: '/doctor/appointments/today' },
             { id: 'schedule-calendar', label: 'Schedule Calendar', icon: Calendar, href: '/doctor/appointments/calendar' },
             { id: 'appointment-requests', label: 'Appointment Requests', icon: Clock, href: '/doctor/appointments/requests' }
           ]

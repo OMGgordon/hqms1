@@ -14,18 +14,12 @@ import {
 import {
   Users,
   Calendar,
-  Clock,
   Building2,
   Activity,
   FileText,
   AlertCircle,
   CheckCircle,
   User,
-  Phone,
-  MapPin,
-  Bell,
-  Heart,
-  TrendingUp,
   BarChart3,
   UserCheck,
   Stethoscope,
@@ -126,7 +120,7 @@ export default function AdminDashboard() {
         <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
           <div className="flex items-center justify-between">
             <div>
-              <p className="text-sm font-medium text-gray-600">Today's Appointments</p>
+              <p className="text-sm font-medium text-gray-600">Today&apos;s Appointments</p>
               <p className="text-2xl font-bold text-gray-900">{todayAppointments}</p>
             </div>
             <div className="p-3 bg-purple-100 rounded-lg">

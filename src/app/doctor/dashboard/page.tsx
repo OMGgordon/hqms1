@@ -12,14 +12,8 @@ import {
   Stethoscope,
   Activity,
   FileText,
-  AlertCircle,
   CheckCircle,
   User,
-  Phone,
-  MapPin,
-  Bell,
-  Heart,
-  TrendingUp,
   BarChart3,
   UserCheck
 } from 'lucide-react';
@@ -82,7 +76,7 @@ export default function DoctorDashboard() {
         <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
           <div className="flex items-center justify-between">
             <div>
-              <p className="text-sm font-medium text-gray-600">Today's Appointments</p>
+              <p className="text-sm font-medium text-gray-600">Today&apos;s Appointments</p>
               <p className="text-2xl font-bold text-gray-900">{todayAppointments.length}</p>
             </div>
             <div className="p-3 bg-blue-100 rounded-lg">
@@ -156,10 +150,10 @@ export default function DoctorDashboard() {
 
       {/* Main Content Grid */}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-        {/* Today's Schedule */}
+        {/* Today&apos;s Schedule */}
         <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
           <div className="flex items-center justify-between mb-6">
-            <h3 className="text-lg font-semibold text-gray-900">Today's Schedule</h3>
+            <h3 className="text-lg font-semibold text-gray-900">Today&apos;s Schedule</h3>
             <Calendar className="h-5 w-5 text-blue-500" />
           </div>
 

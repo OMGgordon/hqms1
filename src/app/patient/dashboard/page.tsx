@@ -174,7 +174,7 @@ export default function PatientDashboard() {
                       <span className="text-sm font-bold text-green-600">#{queueEntries[0]?.queueNumber}</span>
                     </div>
                     <div>
-                      <p className="font-medium text-gray-900">You're in the queue</p>
+                      <p className="font-medium text-gray-900">You&apos;re in the queue</p>
                       <p className="text-sm text-gray-600">Department: Cardiology</p>
                     </div>
                   </div>
