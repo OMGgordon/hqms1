@@ -21,7 +21,8 @@ import {
   XCircle,
   Settings,
   Activity,
-  FileText
+  FileText,
+  CreditCard
 } from 'lucide-react';
 
 export default function PatientDashboard() {
@@ -283,7 +284,10 @@ export default function PatientDashboard() {
               <h2 className="text-xl font-semibold text-gray-900">Quick Actions</h2>
             </div>
             <div className="p-6 space-y-3">
-              <button className="w-full flex items-center gap-3 p-3 text-left border border-gray-200 rounded-lg hover:bg-blue-50 hover:border-blue-200">
+              <button 
+                onClick={() => router.push('/patient/appointments/book')}
+                className="w-full flex items-center gap-3 p-3 text-left border border-gray-200 rounded-lg hover:bg-blue-50 hover:border-blue-200"
+              >
                 <Calendar className="h-5 w-5 text-blue-600" />
                 <div>
                   <p className="font-medium text-gray-900">Book Appointment</p>
@@ -291,7 +295,10 @@ export default function PatientDashboard() {
                 </div>
               </button>
               
-              <button className="w-full flex items-center gap-3 p-3 text-left border border-gray-200 rounded-lg hover:bg-green-50 hover:border-green-200">
+              <button 
+                onClick={() => router.push('/patient/queue/join')}
+                className="w-full flex items-center gap-3 p-3 text-left border border-gray-200 rounded-lg hover:bg-green-50 hover:border-green-200"
+              >
                 <Users className="h-5 w-5 text-green-600" />
                 <div>
                   <p className="font-medium text-gray-900">Join Queue</p>
@@ -299,7 +306,10 @@ export default function PatientDashboard() {
                 </div>
               </button>
               
-              <button className="w-full flex items-center gap-3 p-3 text-left border border-gray-200 rounded-lg hover:bg-purple-50 hover:border-purple-200">
+              <button 
+                onClick={() => router.push('/patient/records')}
+                className="w-full flex items-center gap-3 p-3 text-left border border-gray-200 rounded-lg hover:bg-purple-50 hover:border-purple-200"
+              >
                 <FileText className="h-5 w-5 text-purple-600" />
                 <div>
                   <p className="font-medium text-gray-900">Medical Records</p>
@@ -307,11 +317,36 @@ export default function PatientDashboard() {
                 </div>
               </button>
               
-              <button className="w-full flex items-center gap-3 p-3 text-left border border-gray-200 rounded-lg hover:bg-orange-50 hover:border-orange-200">
+              <button 
+                onClick={() => router.push('/patient/profile')}
+                className="w-full flex items-center gap-3 p-3 text-left border border-gray-200 rounded-lg hover:bg-orange-50 hover:border-orange-200"
+              >
                 <Settings className="h-5 w-5 text-orange-600" />
                 <div>
                   <p className="font-medium text-gray-900">Profile Settings</p>
                   <p className="text-sm text-gray-600">Update your info</p>
+                </div>
+              </button>
+
+              <button 
+                onClick={() => router.push('/patient/billing')}
+                className="w-full flex items-center gap-3 p-3 text-left border border-gray-200 rounded-lg hover:bg-indigo-50 hover:border-indigo-200"
+              >
+                <CreditCard className="h-5 w-5 text-indigo-600" />
+                <div>
+                  <p className="font-medium text-gray-900">Billing & Payments</p>
+                  <p className="text-sm text-gray-600">Manage your bills</p>
+                </div>
+              </button>
+
+              <button 
+                onClick={() => router.push('/patient/settings')}
+                className="w-full flex items-center gap-3 p-3 text-left border border-gray-200 rounded-lg hover:bg-gray-50 hover:border-gray-300"
+              >
+                <User className="h-5 w-5 text-gray-600" />
+                <div>
+                  <p className="font-medium text-gray-900">Account Settings</p>
+                  <p className="text-sm text-gray-600">Privacy & preferences</p>
                 </div>
               </button>
             </div>
@@ -346,7 +381,10 @@ export default function PatientDashboard() {
               
               {notifications.length > 3 && (
                 <div className="mt-4 pt-4 border-t border-gray-200">
-                  <button className="text-blue-600 hover:text-blue-700 text-sm font-medium">
+                  <button 
+                    onClick={() => router.push('/patient/notifications')}
+                    className="text-blue-600 hover:text-blue-700 text-sm font-medium"
+                  >
                     View All Notifications →
                   </button>
                 </div>

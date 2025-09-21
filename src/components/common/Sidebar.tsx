@@ -16,7 +16,11 @@ import {
   LogOut,
   Stethoscope,
   UserCircle,
-  ClipboardList
+  ClipboardList,
+  FileText,
+  Shield,
+  Phone,
+  History
 } from 'lucide-react';
 
 interface SidebarProps {
@@ -34,9 +38,14 @@ export default function Sidebar({ className }: SidebarProps) {
       case 'patient':
         return [
           { href: '/dashboard', icon: Home, label: 'Dashboard' },
-          { href: '/appointments', icon: Calendar, label: 'Appointments' },
+          { href: '/appointments', icon: Calendar, label: 'Book Appointment' },
+          { href: '/appointments/history', icon: History, label: 'Appointment History' },
           { href: '/queue-status', icon: Clock, label: 'Queue Status' },
+          { href: '/records', icon: FileText, label: 'Medical Records' },
+          { href: '/insurance', icon: Shield, label: 'Insurance' },
+          { href: '/emergency-contacts', icon: Phone, label: 'Emergency Contacts' },
           { href: '/profile', icon: UserCircle, label: 'Profile' },
+          { href: '/settings', icon: Settings, label: 'Settings' },
         ];
       case 'doctor':
         return [
